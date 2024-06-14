@@ -1,0 +1,205 @@
+* {
+  font-weight: 600;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  background: #222 url("/public/sky-4237062_1920.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Open Sans', sans-serif;
+  height: 100vh; /* Make sure the background covers the full viewport height */
+}
+
+.card {
+  /* background: rgba(0, 0, 0, 0.87); */
+  color: white;
+  border-radius: 30px;
+  padding: 2em;
+  width: 100%;
+  max-width: 900px; 
+  margin: 1em 0;
+  box-sizing: border-box;
+  backdrop-filter: blur(0px) saturate(200%);
+  -webkit-backdrop-filter: blur(0px) saturate(200%);
+  background-color: rgba(17, 25, 40, 0.5);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.search input {
+  border-radius: 24px;
+  background-color: rgba(255, 255, 255, 0.17);
+  padding: 0.4em 1em;
+  outline: none;
+  border: none;
+  font-family: inherit;
+  color: white;
+  font-size: 120%;
+  width: calc(100% - 100px);
+}
+.search input::placeholder {
+  color: #ffffff; /* Replace with the color you prefer */
+}
+
+.search button {
+  margin: 1rem;
+  margin-right: 0;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  height: 44px;
+  width: 44px;
+  background-color: rgba(124, 124, 124, 0.17);
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+.search button:hover {
+  background-color: rgba(124, 124, 124, 0.42);
+}
+
+.location-button {
+  margin-left: 1em; /* Add margin to separate Search and Location buttons */
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  height: 44px;
+  width: 44px;
+  background-color: rgba(124, 124, 124, 0.17);
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+.location-button:hover {
+  background-color: rgba(124, 124, 124, 0.42);
+}
+
+.weather {
+  margin-top: 1em;
+}
+
+.weather .city {
+  font-size: 1.8em; /* Decreased font size for city name */
+  margin-bottom: 0.5em;
+}
+
+.weather .temp {
+  font-size: 2.5em; /* Decreased font size for temperature */
+  margin-bottom: 0.5em;
+}
+
+.weather .flex {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.weather .flex img {
+  margin-right: 10px;
+  width: 30px; /* Adjusted width of icons for wind speed and pressure */
+  height: auto;
+}
+
+.weather .description {
+  text-transform: capitalize;
+  font-size: 1.2em; /* Decreased font size for weather description */
+}
+
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 1em;
+}
+
+.detail-item {
+  flex: 1 1 48%; /* Take up about half of the row */
+  margin-bottom: 1em;
+  font-size: 1.2em; /* Decreased font size for detail items */
+}
+
+.forecast-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 1em;
+  padding: 0.5em;
+  width: 100%;
+  max-width: 900px; /* Adjusted maximum width */
+  box-sizing: border-box;
+  visibility: hidden;
+}
+
+.forecast-card {
+  /* background: rgba(0, 0, 0, 0.87);  */
+  color: white;
+  border-radius: 20px;
+  padding: 1em;
+  flex: 1;
+  text-align: center;
+  width: calc(20% - 1em); /* Adjusted width for 5 cards in a row */
+  margin: 0.5em;
+  box-sizing: border-box;
+  visibility: visible;
+  backdrop-filter: blur(0px) saturate(200%);
+  -webkit-backdrop-filter: blur(0px) saturate(200%);
+  background-color: rgba(17, 25, 40, 0.5);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+
+}
+
+.forecast-card .city {
+  font-size: 1.2em; /* Adjusted font size for forecast city */
+  margin-bottom: 0.5em;
+}
+
+.forecast-card .temp {
+  font-size: 1.8em; /* Adjusted font size for forecast temperature */
+  margin-bottom: 0.5em;
+}
+
+.forecast-card .flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5em;
+}
+
+.forecast-card .flex img {
+  margin-right: 10px;
+  width: 30px; /* Adjusted width of icons for forecast */
+  height: auto;
+}
+
+.forecast-card .description {
+  text-transform: capitalize;
+  font-size: 1em; /* Adjusted font size for forecast description */
+}
+
+@media (max-width: 900px) {
+  .forecast-card {
+    width: calc(50% - 1em); /* Adjusted width for 2 cards in a row */
+  }
+}
