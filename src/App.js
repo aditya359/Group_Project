@@ -3,7 +3,7 @@ import './App.css';
 import { FaLocationCrosshairs } from "react-icons/fa6";
 
 const App = () => {
-  const [city, setCity] = useState('Denver');
+  const [city, setCity] = useState('Mumbai');
   const [weather, setWeather] = useState(null);
   const [forecast, setForecast] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -103,7 +103,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className="main-div">
       <div className="card main-card">
         <div className="search">
           <input type="text" className="search-bar" placeholder="Search" />

@@ -108,6 +108,13 @@ body {
   margin-bottom: 0.5em;
 }
 
+.main-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .weather .flex {
   display: flex;
   align-items: center;
@@ -201,5 +208,8 @@ body {
 @media (max-width: 900px) {
   .forecast-card {
     width: calc(50% - 1em); /* Adjusted width for 2 cards in a row */
+  }
+  .main-card {
+    width: 90%;
   }
 }
